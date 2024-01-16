@@ -15,7 +15,7 @@ class LotteryViewController: UIViewController {
     @IBOutlet weak var lottoDateLabel: UILabel!
     @IBOutlet weak var roundPickerView: UIPickerView!
     
-    let lottoAPIManager = LottoAPIManager()
+    let apiManager = APIManager()
     
     var numList: [Int] = []
     
@@ -46,7 +46,7 @@ class LotteryViewController: UIViewController {
     
     /// alamofire request하는 함수
     func requestSettingData(round: String) {
-        lottoAPIManager.callRequest(round: round) { lottoData in
+        apiManager.callRequest(round: round) { lottoData in
             self.configureView(data: lottoData)
 
         }
