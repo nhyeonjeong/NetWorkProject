@@ -23,6 +23,7 @@
 		8BFD63782B56D1F3001B93C6 /* BeerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFD63772B56D1F3001B93C6 /* BeerListViewController.swift */; };
 		8BFD637A2B56D73C001B93C6 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFD63792B56D73C001B93C6 /* Beer.swift */; };
 		8BFD637C2B56D9D8001B93C6 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFD637B2B56D9D8001B93C6 /* APIManager.swift */; };
+		8BFD637F2B56F5E6001B93C6 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8BFD637E2B56F5E6001B93C6 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BFD637F2B56F5E6001B93C6 /* Kingfisher in Frameworks */,
 				8BFD636B2B567B16001B93C6 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,6 +148,7 @@
 			name = NetWorkProject;
 			packageProductDependencies = (
 				8BFD636A2B567B16001B93C6 /* Alamofire */,
+				8BFD637E2B56F5E6001B93C6 /* Kingfisher */,
 			);
 			productName = NetWorkProject;
 			productReference = 8BFD634B2B5673B1001B93C6 /* NetWorkProject.app */;
@@ -177,6 +180,7 @@
 			mainGroup = 8BFD63422B5673B1001B93C6;
 			packageReferences = (
 				8BFD63692B567B16001B93C6 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				8BFD637D2B56F5E6001B93C6 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 8BFD634C2B5673B1001B93C6 /* Products */;
 			projectDirPath = "";
@@ -372,7 +376,7 @@
 				INFOPLIST_FILE = NetWorkProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Lottery;
+				INFOPLIST_KEY_UIMainStoryboardFile = Beer;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -399,7 +403,7 @@
 				INFOPLIST_FILE = NetWorkProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Lottery;
+				INFOPLIST_KEY_UIMainStoryboardFile = Beer;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -447,6 +451,14 @@
 				minimumVersion = 5.8.1;
 			};
 		};
+		8BFD637D2B56F5E6001B93C6 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.10.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -454,6 +466,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8BFD63692B567B16001B93C6 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		8BFD637E2B56F5E6001B93C6 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8BFD637D2B56F5E6001B93C6 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

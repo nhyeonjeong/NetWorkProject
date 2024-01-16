@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dWy-W5-ahA">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
@@ -32,12 +32,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSV-RX-adv">
-                                <rect key="frame" x="175.66666666666666" y="89" width="42" height="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오늘은 이 맥주를 추천합니다!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSV-RX-adv">
+                                <rect key="frame" x="99.666666666666686" y="89" width="194" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="E6u-su-Za6"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -69,6 +69,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="randomButtonClicked:" destination="skp-3G-29y" eventType="touchUpInside" id="bcB-mC-Tnq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oaL-GO-eWh"/>
@@ -90,6 +93,12 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="recommand" selectedImage="waterbottle.fill" catalog="system" id="8r5-rE-m9e"/>
+                    <connections>
+                        <outlet property="beerDescriptionLabel" destination="I37-EU-gf1" id="gBQ-kA-UPS"/>
+                        <outlet property="beerImageView" destination="I7F-7n-ghW" id="c2C-uB-cho"/>
+                        <outlet property="beerNameLabel" destination="hbA-VU-flG" id="qZd-mr-vxK"/>
+                        <outlet property="randomButton" destination="lH5-v6-ujV" id="BeE-a4-nkZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8jZ-th-dGI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
