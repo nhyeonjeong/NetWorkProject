@@ -26,14 +26,11 @@ class LotteryViewController: UIViewController {
         
     }
     
-//    @IBAction func returnTapped(_ sender: UITextField) {
-//        requestSettingData(round: sender.text!)
-//    }
-//    
-//    @IBAction func textFieldTouched(_ sender: UITextField) {
-//        print(#function)
-//        roundPickerView.isHidden = false
-//    }
+    @IBAction func textFieldClicked(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true) // textfield를 누르면 오히려 숫자 못 넣도록
+        roundPickerView.isHidden = false
+    }
+
     /// 데이터 세팅(로또번호와 날짜 라벨)
     func configureView(data: Lotto) {
         
@@ -61,11 +58,11 @@ extension LotteryViewController {
     /// 디자인
     func settingView() {
         roundPickerView.isHidden = true
-//        
-//        roundPickerView.delegate = self
-//        roundPickerView.dataSource = self
-//        
-        roundTextField.placeholder = "로또 회차를 입력해주세요"
+        
+        roundPickerView.delegate = self
+        roundPickerView.dataSource = self
+        
+        roundTextField.text = "1102"
         
         for item in numberImageViews {
             item.tintColor = .orange
@@ -76,19 +73,22 @@ extension LotteryViewController {
     }
 }
 
-//extension LotteryViewController: UIPickerViewDelegate, UIPickerViewDataSource {
-//    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-//        return 1
-//    }
-//    
-//    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-//        return 1102
-//    }
-//    
-//    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-//        roundTextField.text = "\(component)"
-//    }
-//    
-//    
-//    
-//}
+extension LotteryViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return 1102
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return "\(row + 1)"
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        roundTextField.text = "\(row + 1)"
+        requestSettingData(round: "\(row + 1)")
+    }
+
+}

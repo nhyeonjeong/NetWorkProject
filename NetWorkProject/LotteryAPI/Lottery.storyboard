@@ -18,11 +18,11 @@
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="533-9Y-9EI">
                                 <rect key="frame" x="10" y="59" width="373" height="34"/>
+                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="returnTapped:" destination="Y6W-OH-hqX" eventType="editingDidEndOnExit" id="dQh-Z3-oyZ"/>
-                                    <action selector="textFieldTouched:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="zsU-ob-pyT"/>
+                                    <outletCollection property="gestureRecognizers" destination="7VC-Li-bhc" appends="YES" id="mln-fQ-WP3"/>
                                 </connections>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ocJ-31-dwv">
@@ -121,6 +121,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="7VC-Li-bhc">
+                    <connections>
+                        <action selector="textFieldClicked:" destination="Y6W-OH-hqX" id="Gl5-nH-f1b"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="135.1145038167939" y="4.9295774647887329"/>
         </scene>
