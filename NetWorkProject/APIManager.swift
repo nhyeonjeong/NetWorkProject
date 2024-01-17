@@ -65,3 +65,24 @@ extension APIManager {
         }
     }
 }
+
+// 파파고 번역 APIManager
+extension APIManager {
+    func papagoRequest(headerData: HTTPHeaders, bodyData: Parameters, completionHandler: @escaping (String) -> Void) {
+        
+        APIManager.url = "https://openapi.naver.com/v1/papago/n2mt"
+        
+        AF.request(APIManager.url, method: .post, parameters: bodyData, headers: headerData).responseDecodable(of: Papago.self) { response in
+            switch response.result {
+            case .success(let success):
+                
+                print(success)
+                completionHandler(success.message.result.translatedText)
+                
+            case .failure(let failure):
+                print("오류 : \(failure)")
+            }
+        }
+        
+    }
+}
