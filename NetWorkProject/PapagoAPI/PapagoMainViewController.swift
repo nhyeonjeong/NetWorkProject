@@ -55,14 +55,14 @@ class PapagoMainViewController: UIViewController {
             return
         }
         */
-//        let headers: HTTPHeaders = ["X-Naver-Client-Id": APIKey.clientID,
-//                                    "X-Naver-Client-Secret": APIKey.clientSecret]
+        let headers: HTTPHeaders = ["X-Naver-Client-Id": APIKey.clientID,
+                                    "X-Naver-Client-Secret": APIKey.clientSecret]
         
         let parameters: Parameters = ["source": source,
                                       "target": target,
                                       "text": textView.text!]
         
-        apiManager.papagoRequest(bodyData: parameters) { result in
+        apiManager.papagoRequest(headerData: headers, bodyData: parameters) { result in
             self.translateLabel.text = result.translatedText // 번역한 문장 띄우기
             
         }/*한국어*/
