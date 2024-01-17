@@ -18,7 +18,7 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Beer" selectedImage="list.clipboard.fill" catalog="system" id="vPZ-DX-HvH"/>
+                    <tabBarItem key="tabBarItem" title="Beer" image="list.clipboard.fill" catalog="system" selectedImage="list.clipboard.fill" id="vPZ-DX-HvH"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -92,7 +92,7 @@
                             <constraint firstItem="I7F-7n-ghW" firstAttribute="width" secondItem="Pt0-Ch-A00" secondAttribute="width" multiplier="0.6" id="zlB-zW-Gld"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="recommand" selectedImage="waterbottle.fill" catalog="system" id="8r5-rE-m9e"/>
+                    <tabBarItem key="tabBarItem" title="recommand" image="waterbottle.fill" catalog="system" id="8r5-rE-m9e"/>
                     <connections>
                         <outlet property="beerDescriptionLabel" destination="I37-EU-gf1" id="gBQ-kA-UPS"/>
                         <outlet property="beerImageView" destination="I7F-7n-ghW" id="c2C-uB-cho"/>
@@ -110,6 +110,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="dWy-W5-ahA" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3Ch-0d-Sdb">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

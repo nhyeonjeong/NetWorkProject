@@ -24,6 +24,13 @@
 		8BFD637A2B56D73C001B93C6 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFD63792B56D73C001B93C6 /* Beer.swift */; };
 		8BFD637C2B56D9D8001B93C6 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFD637B2B56D9D8001B93C6 /* APIManager.swift */; };
 		8BFD637F2B56F5E6001B93C6 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8BFD637E2B56F5E6001B93C6 /* Kingfisher */; };
+		8BFD638C2B57B4CE001B93C6 /* AnyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFD638A2B57B4CE001B93C6 /* AnyTableViewCell.swift */; };
+		8BFD638D2B57B4CE001B93C6 /* AnyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BFD638B2B57B4CE001B93C6 /* AnyTableViewCell.xib */; };
+		8BFD63922B57B899001B93C6 /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFD63912B57B899001B93C6 /* LanguageViewController.swift */; };
+		8BFD63942B57B8B8001B93C6 /* PapagoMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFD63932B57B8B8001B93C6 /* PapagoMainViewController.swift */; };
+		8BFD63962B57B949001B93C6 /* Papago.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFD63952B57B949001B93C6 /* Papago.swift */; };
+		8BFD63992B57CE05001B93C6 /* Enumeration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFD63982B57CE05001B93C6 /* Enumeration.swift */; };
+		8BFD639E2B57D413001B93C6 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8BFD639D2B57D413001B93C6 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +51,13 @@
 		8BFD63772B56D1F3001B93C6 /* BeerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListViewController.swift; sourceTree = "<group>"; };
 		8BFD63792B56D73C001B93C6 /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		8BFD637B2B56D9D8001B93C6 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		8BFD638A2B57B4CE001B93C6 /* AnyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyTableViewCell.swift; sourceTree = "<group>"; };
+		8BFD638B2B57B4CE001B93C6 /* AnyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnyTableViewCell.xib; sourceTree = "<group>"; };
+		8BFD63912B57B899001B93C6 /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
+		8BFD63932B57B8B8001B93C6 /* PapagoMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PapagoMainViewController.swift; sourceTree = "<group>"; };
+		8BFD63952B57B949001B93C6 /* Papago.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Papago.swift; sourceTree = "<group>"; };
+		8BFD63982B57CE05001B93C6 /* Enumeration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enumeration.swift; sourceTree = "<group>"; };
+		8BFD639D2B57D413001B93C6 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +76,7 @@
 		8BFD63422B5673B1001B93C6 = {
 			isa = PBXGroup;
 			children = (
+				8BFD639D2B57D413001B93C6 /* .gitignore */,
 				8BFD634D2B5673B1001B93C6 /* NetWorkProject */,
 				8BFD634C2B5673B1001B93C6 /* Products */,
 			);
@@ -78,6 +93,7 @@
 		8BFD634D2B5673B1001B93C6 /* NetWorkProject */ = {
 			isa = PBXGroup;
 			children = (
+				8BFD638E2B57B853001B93C6 /* PapagoAPI */,
 				8BFD63722B56D179001B93C6 /* BeerAPI */,
 				8BFD636F2B56BBFD001B93C6 /* Extension */,
 				8BFD636C2B567B90001B93C6 /* Model */,
@@ -90,6 +106,9 @@
 				8BFD63592B5673B3001B93C6 /* LaunchScreen.storyboard */,
 				8BFD635C2B5673B3001B93C6 /* Info.plist */,
 				8BFD637B2B56D9D8001B93C6 /* APIManager.swift */,
+				8BFD638A2B57B4CE001B93C6 /* AnyTableViewCell.swift */,
+				8BFD638B2B57B4CE001B93C6 /* AnyTableViewCell.xib */,
+				8BFD63982B57CE05001B93C6 /* Enumeration.swift */,
 			);
 			path = NetWorkProject;
 			sourceTree = "<group>";
@@ -106,6 +125,7 @@
 		8BFD636C2B567B90001B93C6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8BFD63952B57B949001B93C6 /* Papago.swift */,
 				8BFD636D2B567B99001B93C6 /* Lotto.swift */,
 				8BFD63792B56D73C001B93C6 /* Beer.swift */,
 			);
@@ -128,6 +148,15 @@
 				8BFD63772B56D1F3001B93C6 /* BeerListViewController.swift */,
 			);
 			path = BeerAPI;
+			sourceTree = "<group>";
+		};
+		8BFD638E2B57B853001B93C6 /* PapagoAPI */ = {
+			isa = PBXGroup;
+			children = (
+				8BFD63912B57B899001B93C6 /* LanguageViewController.swift */,
+				8BFD63932B57B8B8001B93C6 /* PapagoMainViewController.swift */,
+			);
+			path = PapagoAPI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,7 +226,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BFD63662B567702001B93C6 /* Lottery.storyboard in Resources */,
+				8BFD639E2B57D413001B93C6 /* .gitignore in Resources */,
 				8BFD63742B56D190001B93C6 /* Beer.storyboard in Resources */,
+				8BFD638D2B57B4CE001B93C6 /* AnyTableViewCell.xib in Resources */,
 				8BFD635B2B5673B3001B93C6 /* LaunchScreen.storyboard in Resources */,
 				8BFD63582B5673B3001B93C6 /* Assets.xcassets in Resources */,
 				8BFD63562B5673B1001B93C6 /* Main.storyboard in Resources */,
@@ -211,8 +242,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BFD63942B57B8B8001B93C6 /* PapagoMainViewController.swift in Sources */,
 				8BFD636E2B567B99001B93C6 /* Lotto.swift in Sources */,
 				8BFD63642B5676FA001B93C6 /* LotteryViewController.swift in Sources */,
+				8BFD63922B57B899001B93C6 /* LanguageViewController.swift in Sources */,
 				8BFD63532B5673B1001B93C6 /* ViewController.swift in Sources */,
 				8BFD63782B56D1F3001B93C6 /* BeerListViewController.swift in Sources */,
 				8BFD637C2B56D9D8001B93C6 /* APIManager.swift in Sources */,
@@ -220,6 +253,9 @@
 				8BFD63512B5673B1001B93C6 /* SceneDelegate.swift in Sources */,
 				8BFD637A2B56D73C001B93C6 /* Beer.swift in Sources */,
 				8BFD63712B56BC08001B93C6 /* DateFormatter+Extension.swift in Sources */,
+				8BFD63992B57CE05001B93C6 /* Enumeration.swift in Sources */,
+				8BFD63962B57B949001B93C6 /* Papago.swift in Sources */,
+				8BFD638C2B57B4CE001B93C6 /* AnyTableViewCell.swift in Sources */,
 				8BFD63762B56D1AE001B93C6 /* BeerRandomViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
