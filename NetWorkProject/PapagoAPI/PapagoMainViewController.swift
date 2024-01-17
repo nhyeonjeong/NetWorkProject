@@ -37,7 +37,12 @@ class PapagoMainViewController: UIViewController {
         leftLanguage = rightLanguage
         rightLanguage = tempLan
         
-        settingButtonLanguageTitle(left: leftLanguage, right: rightLanguage) // 버튼다시 설정
+        // 버튼다시 설정
+        settingButtonLanguageTitle(left: leftLanguage, right: rightLanguage)
+        
+        // textview와 label 초기화
+        textView.text = ""
+        translateLabel.text = ""
         
     }
     // 번역 버튼 눌렀을 때
@@ -62,8 +67,8 @@ class PapagoMainViewController: UIViewController {
                                       "target": target,
                                       "text": textView.text!]
         
-        apiManager.papagoRequest(headerData: headers, bodyData: parameters) { result in
-            self.translateLabel.text = result.translatedText // 번역한 문장 띄우기
+        apiManager.papagoRequest(headerData: headers, bodyData: parameters) { text in
+            self.translateLabel.text = text // 번역한 문장 띄우기
             
         }/*한국어*/
     }

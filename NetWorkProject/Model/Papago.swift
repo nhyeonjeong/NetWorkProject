@@ -6,6 +6,10 @@
 //
 
 import Foundation
+// Papago 뺴먹지 말기!
+struct Papago: Codable {
+    let message: Message
+}
 
 struct Message: Codable {
     let result: Result
