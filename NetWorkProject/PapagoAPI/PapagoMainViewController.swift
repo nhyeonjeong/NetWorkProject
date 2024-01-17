@@ -27,8 +27,18 @@ class PapagoMainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         settingView()
+    }
+    
+    @IBAction func languageButtonClicked(_ sender: UIButton) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "LanguageViewController") as! LanguageViewController
         
-        
+        if sender == leftLanguageButton {
+            vc.selectedLanguage = leftLanguage.rawValue
+        } else {
+            vc.selectedLanguage = rightLanguage.rawValue
+        }
+        // 그냥 일단 버튼만 넘어가도록
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func changeLanButtonClicked(_ sender: UIButton) {

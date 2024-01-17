@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Language: String {
+enum Language: String, CaseIterable {
     case 한국어 = "ko"
     case 영어 = "en"
     case 일본어 = "ja"

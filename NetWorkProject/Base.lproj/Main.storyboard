@@ -58,6 +58,9 @@
                                         <rect key="frame" x="0.0" y="0.0" width="82.666666666666671" height="60"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title=""/>
+                                        <connections>
+                                            <action selector="languageButtonClicked:" destination="xu9-YZ-ky1" eventType="touchUpInside" id="mZf-uG-NSb"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oo2-bU-JFK">
                                         <rect key="frame" x="107.66666666666666" y="0.0" width="60" height="60"/>
@@ -75,6 +78,9 @@
                                         <rect key="frame" x="192.66666666666666" y="0.0" width="82.333333333333343" height="60"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title=""/>
+                                        <connections>
+                                            <action selector="languageButtonClicked:" destination="xu9-YZ-ky1" eventType="touchUpInside" id="uk7-Wh-ePd"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -113,6 +119,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hnl-B1-pp0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1866.4122137404579" y="290.84507042253523"/>
+        </scene>
+        <!--Language View Controller-->
+        <scene sceneID="djR-E7-4Us">
+            <objects>
+                <viewController storyboardIdentifier="LanguageViewController" id="UhF-GJ-Bdv" customClass="LanguageViewController" customModule="NetWorkProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4RU-zI-VNf">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OCF-GC-CsT">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="languageTableViewCell" id="VLJ-La-mbB">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VLJ-La-mbB" id="K7b-lf-7cT">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lzq-2y-Wfm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lzq-2y-Wfm" firstAttribute="trailing" secondItem="OCF-GC-CsT" secondAttribute="trailing" id="7EX-GE-Fgd"/>
+                            <constraint firstItem="OCF-GC-CsT" firstAttribute="top" secondItem="lzq-2y-Wfm" secondAttribute="top" id="KAq-g4-fbn"/>
+                            <constraint firstItem="OCF-GC-CsT" firstAttribute="leading" secondItem="lzq-2y-Wfm" secondAttribute="leading" id="LBs-T8-wJA"/>
+                            <constraint firstItem="lzq-2y-Wfm" firstAttribute="bottom" secondItem="OCF-GC-CsT" secondAttribute="bottom" id="neN-MO-nqk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="languageTableView" destination="OCF-GC-CsT" id="SnH-Hp-GF2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uax-r0-bXE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2749" y="291"/>
         </scene>
         <!--Beer-->
         <scene sceneID="bKF-is-bEM">
