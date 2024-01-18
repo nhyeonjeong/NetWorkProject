@@ -32,6 +32,11 @@
 		8BFD63992B57CE05001B93C6 /* Enumeration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFD63982B57CE05001B93C6 /* Enumeration.swift */; };
 		8BFD639E2B57D413001B93C6 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8BFD639D2B57D413001B93C6 /* .gitignore */; };
 		8BFD63A12B57D52D001B93C6 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFD63A02B57D52D001B93C6 /* APIKey.swift */; };
+		8BFD63A42B58147D001B93C6 /* Book.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BFD63A32B58147D001B93C6 /* Book.storyboard */; };
+		8BFD63A62B5814AB001B93C6 /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFD63A52B5814AB001B93C6 /* BookViewController.swift */; };
+		8BFD63A82B581765001B93C6 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFD63A72B581765001B93C6 /* Book.swift */; };
+		8BFD63AB2B5843C5001B93C6 /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFD63A92B5843C5001B93C6 /* BookCollectionViewCell.swift */; };
+		8BFD63AC2B5843C5001B93C6 /* BookCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BFD63AA2B5843C5001B93C6 /* BookCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +65,11 @@
 		8BFD63982B57CE05001B93C6 /* Enumeration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enumeration.swift; sourceTree = "<group>"; };
 		8BFD639D2B57D413001B93C6 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		8BFD63A02B57D52D001B93C6 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		8BFD63A32B58147D001B93C6 /* Book.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Book.storyboard; sourceTree = "<group>"; };
+		8BFD63A52B5814AB001B93C6 /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
+		8BFD63A72B581765001B93C6 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		8BFD63A92B5843C5001B93C6 /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
+		8BFD63AA2B5843C5001B93C6 /* BookCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +105,7 @@
 		8BFD634D2B5673B1001B93C6 /* NetWorkProject */ = {
 			isa = PBXGroup;
 			children = (
+				8BFD63A22B5803D8001B93C6 /* BookAPI */,
 				8BFD639F2B57D4FD001B93C6 /* Resource */,
 				8BFD638E2B57B853001B93C6 /* PapagoAPI */,
 				8BFD63722B56D179001B93C6 /* BeerAPI */,
@@ -131,6 +142,7 @@
 				8BFD63952B57B949001B93C6 /* Papago.swift */,
 				8BFD636D2B567B99001B93C6 /* Lotto.swift */,
 				8BFD63792B56D73C001B93C6 /* Beer.swift */,
+				8BFD63A72B581765001B93C6 /* Book.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -168,6 +180,17 @@
 				8BFD63A02B57D52D001B93C6 /* APIKey.swift */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		8BFD63A22B5803D8001B93C6 /* BookAPI */ = {
+			isa = PBXGroup;
+			children = (
+				8BFD63A32B58147D001B93C6 /* Book.storyboard */,
+				8BFD63A52B5814AB001B93C6 /* BookViewController.swift */,
+				8BFD63A92B5843C5001B93C6 /* BookCollectionViewCell.swift */,
+				8BFD63AA2B5843C5001B93C6 /* BookCollectionViewCell.xib */,
+			);
+			path = BookAPI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,8 +260,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BFD63662B567702001B93C6 /* Lottery.storyboard in Resources */,
+				8BFD63A42B58147D001B93C6 /* Book.storyboard in Resources */,
 				8BFD639E2B57D413001B93C6 /* .gitignore in Resources */,
 				8BFD63742B56D190001B93C6 /* Beer.storyboard in Resources */,
+				8BFD63AC2B5843C5001B93C6 /* BookCollectionViewCell.xib in Resources */,
 				8BFD638D2B57B4CE001B93C6 /* AnyTableViewCell.xib in Resources */,
 				8BFD635B2B5673B3001B93C6 /* LaunchScreen.storyboard in Resources */,
 				8BFD63582B5673B3001B93C6 /* Assets.xcassets in Resources */,
@@ -256,7 +281,9 @@
 				8BFD63942B57B8B8001B93C6 /* PapagoMainViewController.swift in Sources */,
 				8BFD636E2B567B99001B93C6 /* Lotto.swift in Sources */,
 				8BFD63642B5676FA001B93C6 /* LotteryViewController.swift in Sources */,
+				8BFD63AB2B5843C5001B93C6 /* BookCollectionViewCell.swift in Sources */,
 				8BFD63922B57B899001B93C6 /* LanguageViewController.swift in Sources */,
+				8BFD63A62B5814AB001B93C6 /* BookViewController.swift in Sources */,
 				8BFD63532B5673B1001B93C6 /* ViewController.swift in Sources */,
 				8BFD63782B56D1F3001B93C6 /* BeerListViewController.swift in Sources */,
 				8BFD637C2B56D9D8001B93C6 /* APIManager.swift in Sources */,
@@ -266,6 +293,7 @@
 				8BFD63A12B57D52D001B93C6 /* APIKey.swift in Sources */,
 				8BFD63712B56BC08001B93C6 /* DateFormatter+Extension.swift in Sources */,
 				8BFD63992B57CE05001B93C6 /* Enumeration.swift in Sources */,
+				8BFD63A82B581765001B93C6 /* Book.swift in Sources */,
 				8BFD63962B57B949001B93C6 /* Papago.swift in Sources */,
 				8BFD638C2B57B4CE001B93C6 /* AnyTableViewCell.swift in Sources */,
 				8BFD63762B56D1AE001B93C6 /* BeerRandomViewController.swift in Sources */,

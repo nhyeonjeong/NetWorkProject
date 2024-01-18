@@ -68,9 +68,12 @@ extension APIManager {
 
 // 파파고 번역 APIManager
 extension APIManager {
-    func papagoRequest(headerData: HTTPHeaders, bodyData: Parameters, completionHandler: @escaping (String) -> Void) {
+    func papagoRequest(bodyData: Parameters, completionHandler: @escaping (String) -> Void) {
         
         APIManager.url = "https://openapi.naver.com/v1/papago/n2mt"
+        
+        let headerData: HTTPHeaders = ["X-Naver-Client-Id": APIKey.clientID,
+                                    "X-Naver-Client-Secret": APIKey.clientSecret]
         
         AF.request(APIManager.url, method: .post, parameters: bodyData, headers: headerData).responseDecodable(of: Papago.self) { response in
             switch response.result {
@@ -78,6 +81,29 @@ extension APIManager {
                 
                 print(success)
                 completionHandler(success.message.result.translatedText)
+                
+            case .failure(let failure):
+                print("오류 : \(failure)")
+            }
+        }
+        
+    }
+}
+
+extension APIManager {
+    func kakaoBookRequest(text: String, completionHandler: @escaping (Book) -> Void) {
+        let query = text.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        
+        APIManager.url = "https://dapi.kakao.com/v3/search/book?query=\(query!)&size=10"
+    
+        let headerData: HTTPHeaders = ["Authorization": APIKey.kakao]
+
+        AF.request(APIManager.url, method: .get, headers: headerData ).responseDecodable(of: Book.self) { response in
+            switch response.result {
+            case .success(let success):
+                
+                print(success)
+                completionHandler(success)
                 
             case .failure(let failure):
                 print("오류 : \(failure)")
